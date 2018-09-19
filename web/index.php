@@ -1,5 +1,5 @@
 <?php
 
-  phpinfo();
+  readFile("hello.html")
 
 ?>
