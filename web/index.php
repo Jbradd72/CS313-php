@@ -1,6 +1,6 @@
 <?php
-
-  $file = $_GET["page"];
+readFile("hello.html")
+ /* $file = $_GET["page"];
 
   if ($file === NULL){
       
@@ -8,7 +8,7 @@
   }
   else{
       echo($file);
-  }
+  }*/
 
 
 ?>
