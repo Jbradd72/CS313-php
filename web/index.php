@@ -7,7 +7,7 @@
   readFile("index.html")
   }
   else{
-      readFile($file);
+      echo($file);
   }
 
 
