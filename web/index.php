@@ -1,14 +1,10 @@
 <?php
 readFile("hello.html")
- /* $file = $_GET["page"];
-
-  if ($file === NULL){
-      
+ if (isset($_GET["page"])){
+     echo ($_GET["page"]);
+ } else {
   readFile("index.html")
   }
-  else{
-      echo($file);
-  }*/
 
 
 ?>
