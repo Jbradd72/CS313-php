@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Jeff Bradley's Welcome Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <link type="text/css" rel=stylesheet href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap-grid.min.css">
+    <script src="index.js"></script>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl hoverable" id="div1">
+                I am Div 1!
+            </div>
+            <div class="col-lg hoverable" id="div2">
+                I am Div 2!
+            </div>
+            <div class="col-sm hoverable" id="div3">
+                I am Div 3!
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="inputs">
+        <div class="row">
+            <button id="button" onclick="buttonClick()">Click Me!</button>
+        </div>
+        <div class="row">
+            <div class="col-md left-col">
+                <input type="text" placeholder="Hex Code in the form: ffffff" id="colorInput">
+            </div>
+            <div class="col-md right-col">
+                <button id="colorbutton" onclick="colorChange()">Div 1 Color Change</button>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md left-col"><input type="text" placeholder="Hex Code in the form: ffffff" id="jqueryChange"></div>
+            <div class="col-md right-col"><button id="colorbutton2" onclick="jqueryColor()">Div 2 Color Change</button></div>
+        </div>
+        <div class="row">
+            <div class="col-md left-col"><input type="text" placeholder="Hex Code in the form: ffffff" id="colorInput3"></div>
+            <div class="col-md right-col"><button id="colorbutton3" onclick="jqueryFade()">Div 3 Color Change</button></div>
+        </div>
+    </div>
+
+</body>
+</html

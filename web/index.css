@@ -1,39 +1,25 @@
-.hoverable:hover {
-    font-weight: bolder;
-    background-color: dodgerblue;
-    color:black;
-}
-
 body{
+    color:crimson;
     text-align: center;
-    background-color: #000044;
-}
-*{
-    margin: 1%;
 }
 
-.col-xl, .col-lg, .col-sm{
-    /*margin-top:auto;
-    margin-bottom: auto;*/
-    margin-left: 1%;
-    padding:3%;
-    text-align: center;
-    font-size: 1em;
-    color:white;
-    background-color:black;
-    
-}
-.container{
-    padding:1%;
-    background-color: darkblue;
+p{
+    font-style:italic; max-width:750px; margin:auto;
 }
 
-#button{
-    margin:auto;
+p b{
+display:none;
 }
-.left-col{
-    text-align: right;
+
+blockquote{
+    display:none;
+    font-style: oblique;
 }
-.right-col{
-    text-align: left;
+
+a{
+    color: blue;
+}
+a:hover{
+    font-size: 1.2em;
+    font-style: normal;
 }

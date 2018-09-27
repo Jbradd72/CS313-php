@@ -1,58 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Jeff Bradley's Welcome Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>
+        Jeff Bradley's Home Page
+    </title>
     <link type="text/css" rel="stylesheet" href="index.css">
-    <link type="text/css" rel=stylesheet href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap-grid.min.css">
-    <script src="index.js"></script>
-    <script src="jquery-3.3.1.js"></script>
-    <script>
-
-
-    </script>
-
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
+
 <body>
+        <h1>
+            Welcome to Jeff Bradley's Home Page!
+        </h1>
+        <p>
+            <a href="index.php/?page=assignments.html"> Jeff's CS213 Assignments </a><br>
+            <a href="http://www.github.com/Jbradd72">Jeff's Github Repositories</a>
+            <hr>
+            <section id="bio">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xl hoverable" id="div1">
-                I am Div 1!
-            </div>
-            <div class="col-lg hoverable" id="div2">
-                I am Div 2!
-            </div>
-            <div class="col-sm hoverable" id="div3">
-                I am Div 3!
-            </div>
-        </div>
-    </div>
+                <img src="me.jpg" alt="My wife and I on our wedding day." height="400" width="550">
+                <h3>
+                    Brief Bio:
+                </h3>
+                <p>
+                    <b> My name is Jeff Bradley. I was born and raised in Northern California. I spent two years in Northern England as a missionary for The Church of Jesus Christ of Latter-Day Saints. I was married at the Oakland Temple about a year ago and now my wife is pregnant with twins! I am studying Computer Science at BYU-Idaho. This is the beginning of my third year here at BYUI, though I am technically a senior. I love working with computers and technology of all sorts and am excited to learn more about Backend Web Engineering!</b>
+                </p>
+            </section>
+            <section id="quote">
+                <h3 >
+                    My Favourite Quote:
+                </h3>
+                <blockquote>
+                    "I am the master of my fate. <br/> I am the captain of my soul."
+                    <br/><br/> <b>-William Earnest Henley</b>
+                </blockquote>
 
-    <div class="container" id="inputs">
-        <div class="row">
-            <button id="button" onclick="buttonClick()">Click Me!</button>
-        </div>
-        <div class="row">
-            <div class="col-md left-col">
-                <input type="text" placeholder="Hex Code in the form: ffffff" id="colorInput">
-            </div>
-            <div class="col-md right-col">
-                <button id="colorbutton" onclick="colorChange()">Div 1 Color Change</button>
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-md left-col"><input type="text" placeholder="Hex Code in the form: ffffff" id="jqueryChange"></div>
-            <div class="col-md right-col"><button id="colorbutton2" onclick="jqueryColor()">Div 2 Color Change</button></div>
-        </div>
-        <div class="row">
-            <div class="col-md left-col"><input type="text" placeholder="Hex Code in the form: ffffff" id="colorInput3"></div>
-            <div class="col-md right-col"><button id="colorbutton3" onclick="jqueryFade()">Div 3 Color Change</button></div>
-        </div>
-    </div>
-
+            </section>
 </body>
-</html
+
+</html>
