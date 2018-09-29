@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    color:lightcoral;
+    background-image: url("index-background.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul{
+    list-style-position: inside;
+    list-style-type:none; 
+}
+li{
+    margin-bottom: 1%;
+}
+a{
+    font-size:1.8em;
+    text-decoration: underline;
+    color:lightcoral;
+}
+a:hover{
+    color:blue;
+    font-size:2em;
+}

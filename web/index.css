@@ -1,10 +1,15 @@
 body{
-    color:crimson;
+    color:lightcoral;
     text-align: center;
+    background-image: url("index-background.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 p{
-    font-style:italic; max-width:750px; margin:auto;
+    max-width:750px; margin:auto;
 }
 
 p b{
@@ -16,10 +21,17 @@ blockquote{
     font-style: oblique;
 }
 
+h3{
+    text-decoration: underline;
+}
+h3:hover{
+    text-decoration: none;
+}
+
 a{
     color: blue;
 }
 a:hover{
-    font-size: 1.2em;
+    text-decoration: none;
     font-style: normal;
 }
