@@ -16,10 +16,11 @@ li{
 }
 a{
     font-size:1.8em;
-    text-decoration: underline;
     color:lightcoral;
+    border-style: solid;
+    padding:.45%;
 }
 a:hover{
-    color:blue;
+    color:skyblue;
     font-size:2em;
 }
