@@ -1,4 +1,4 @@
-<?php $name = $_POST["name"]; ?>
+<?php echo $name = $_POST["name"]; ?>
 
 
 
