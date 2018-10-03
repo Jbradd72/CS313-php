@@ -1,6 +1,4 @@
-<?php
-
-echo "hi"/* "<html>
+<html>
 
 <head>
     <title>Teach Activity 3</title>
@@ -10,14 +8,13 @@ echo "hi"/* "<html>
 
 <body>
     <h1>Your Info</h1>
-    <p> Name: $_POST["name"] <br>
-        Email: $_POST["email"]<br>
-        Major: $_POST["major"]<br>
-        Comments: $_POST["comments"]
+    <p> <?php Name: $_POST["name"] ?> <br>
+        <?php Email: $_POST["email"] ?><br>
+        <?php Major: $_POST["major"] ?><br>
+        <?php Comments: $_POST["comments"] ?>
 
 
 </body>
-</html>"*/
+</html>
 
 
-?>
