@@ -1,3 +1,4 @@
+<?php $name = $_POST["name"]; ?>
 <html>
 
 <head>
@@ -8,7 +9,7 @@
 
 <body>
     <h1>Your Info</h1>
-    <p> <?php echo Name: $_POST["name"] ?> <br> </p>
+    <p> <?php echo Name: $_POST["name"]; ?> <br> </p>
 
 
 </body>
