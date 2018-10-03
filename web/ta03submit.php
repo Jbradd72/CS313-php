@@ -1,6 +1,6 @@
 <?php
 
-echo "<html>
+echo "hi"/* "<html>
 
 <head>
     <title>Teach Activity 3</title>
@@ -17,7 +17,7 @@ echo "<html>
 
 
 </body>
-</html>"
+</html>"*/
 
 
 ?>
