@@ -27,7 +27,7 @@
         
         for ($i=0; $i < $count; $i++){
             $key = $continents[$i];
-           echo "$contMap[$key] <br>"
+           echo "$contMap[$key] <br>";
         }
         ?></p>
 
