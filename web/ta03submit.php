@@ -19,7 +19,29 @@
         $count = count($continents);
         
         for ($i=0; $i < $count; $i++){
-            echo "$continents[$i] <br>";
+            switch($continents[$i]){
+                case "na":
+                    echo "North America";
+                    break;
+                case "sa":
+                    echo "South America";
+                    break;
+                case "e":
+                    echo "Europe";
+                    break;
+                case "as":
+                    echo "Asia";
+                    break;
+                case "an":
+                    echo "Antarctica";
+                    break;
+                case "au":
+                    echo "Australia";
+                    break;
+                case "af":
+                    echo "Africa";
+                    break;
+            }
         }
         ?></p>
 
