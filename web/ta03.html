@@ -2,23 +2,33 @@
 
 <head>
     <title>Teach Activity 3</title>
-    
+
 
 </head>
 
 <body>
-    
+
     <form action="ta03submit.php" method="post">
-    <input type="text" name="name" placeholder="Name:"><br>
-    <input type="text" name="email" placeholder="Email:"><br>
-    <input type="radio" name="Major" value="Computer Science"> Computer Science<br>
-    <input type="radio" name="Major" value="Web Design and Development"> Web Design and Development <br>
-    <input type="radio" name="Major" value="Computer Information Technology"> Computer Information Technology<br>
-    <input type="radio" name="Major" value="Computer Engineering"> Computer Engineering<br>
-    <textarea name="comments" placeholder="Comments"></textarea><br>
+        <input type="text" name="name" placeholder="Name:"><br>
+        <input type="text" name="email" placeholder="Email:"><br>
+        <input type="radio" name="Major" value="Computer Science"> Computer Science<br>
+        <input type="radio" name="Major" value="Web Design and Development"> Web Design and Development <br>
+        <input type="radio" name="Major" value="Computer Information Technology"> Computer Information Technology<br>
+        <input type="radio" name="Major" value="Computer Engineering"> Computer Engineering<br>
+        <textarea name="comments" placeholder="Comments"></textarea><br>
+        
+
+        <input type="checkbox" name="continents[]" value="North America"> North America<br>
+        <input type="checkbox" name="continents[]" value="South America"> I have a car<br>
+        <input type="checkbox" name="continents[]" value="Europe" checked> I have a boat<br>
+        <input type="checkbox" name="continents[]" value="Africa"> I have a bike<br>
+        <input type="checkbox" name="continents[]" value="Asia"> I have a car<br>
+        <input type="checkbox" name="continents[]" value="Australia" checked> I have a boat<br>
+        <input type="checkbox" name="continents[]" value="Antarctica" checked> I have a boat<br>
         <input type="submit">
     </form>
 
 
 </body>
+
 </html>
