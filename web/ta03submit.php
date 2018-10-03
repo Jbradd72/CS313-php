@@ -8,10 +8,7 @@
 
 <body>
     <h1>Your Info</h1>
-    <p> <?php echo Name: $_POST["name"] ?> <br>
-        <?php echo Email: $_POST["email"] ?><br>
-        <?php echo Major: $_POST["major"] ?><br>
-        <?php echo Comments: $_POST["comments"] ?>
+    <p> <?php echo Name: $_POST["name"] ?> <br> </p>
 
 
 </body>
