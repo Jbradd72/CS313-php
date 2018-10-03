@@ -17,31 +17,17 @@
     <?php 
         $continents = $_POST["continents"];
         $count = count($continents);
+        $contMap = ["na" => "North America",
+                    "sa" => "South America",
+                    "e" => "Europe",
+                   "af" => "Africa",
+                   "as" => "Asia",
+                   "au" => "Australia",
+                   "an" => "Antarctica"];
         
         for ($i=0; $i < $count; $i++){
-            switch($continents[$i]){
-                case "na":
-                    echo "North America";
-                    break;
-                case "sa":
-                    echo "South America";
-                    break;
-                case "e":
-                    echo "Europe";
-                    break;
-                case "as":
-                    echo "Asia";
-                    break;
-                case "an":
-                    echo "Antarctica";
-                    break;
-                case "au":
-                    echo "Australia";
-                    break;
-                case "af":
-                    echo "Africa";
-                    break;
-            }
+            $key = $continents[$i];
+           echo "$contMap[$key] <br>"
         }
         ?></p>
 
