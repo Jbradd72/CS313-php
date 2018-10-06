@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-require 'week3-nav.php'
+require 'week3-nav.php';
 ?>
 
 <html>
@@ -29,4 +29,4 @@ foreach($vars as $key=>$value) {
 </html>
 
 
-<?php require 'week3-footer.php'
+<?php require 'week3-footer.php' ?>
