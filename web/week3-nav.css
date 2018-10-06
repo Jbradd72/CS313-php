@@ -2,6 +2,9 @@ button{
 display:inline !important;
 padding:0;
 }
+div{
+    text-align: center;
+}
 
 body{
     text-align: center;
