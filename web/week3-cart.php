@@ -5,26 +5,32 @@ require 'week3-nav.php';
 ?>
 
 <html>
-    <head>
-<title>My Cart</title>
-        </head>
-    <body>
+
+<head>
+    <title>My Cart</title>
+    <link href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="week3.css" rel="stylesheet">
+    <script src="jquery-3.3.1.js"></script>
+</head>
+
+<body>
     <div class="container">
-    <div class="col-lg-9">
-        <ul>
-        <?php 
-            $vars = get_object_vars ( $_SESSION );
-foreach($vars as $key=>$value) {
-  echo "<li> $key - $value </li>";
-}
+        <div class="col-lg-9">
+            <ul>
+                <?php 
+                foreach($_SESSION as $key=>$value) {
+                    echo "<li> $key - $value </li>";
+                }
             ?>
-        </ul>
-        
-        </div>    
-        
+            </ul>
+
+        </div>
+
     </div>
-    
-    </body>
+
+</body>
 
 </html>
 
