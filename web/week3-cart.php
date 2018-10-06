@@ -32,6 +32,8 @@ require 'week3-nav.php';
                 }
             ?>
             </table>
+        
+        <a id="checkout" href="week3-checkout.php"><button class="btn-info">Checkout</button></a>
 
         </div>
 

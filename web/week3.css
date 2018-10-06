@@ -13,3 +13,10 @@ body {
     padding-top: 56px;
   }
 }
+
+form{
+    width:75%; margin: auto;
+}
+#checkout{
+    margin:auto;
+}
