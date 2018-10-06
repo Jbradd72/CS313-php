@@ -55,7 +55,7 @@ session_start();
             </table>
             
             <h4> Will be sent to: </h4>
-            <h6> <?php $_SESSION['name'] . " at " . $_SESSION['addr']?></h6>
+            <h6> <?php echo $_SESSION['name'] . " at " . $_SESSION['addr'];?></h6>
         
         <a id="checkout" href="week3.php"><button class="btn-info">Submit</button></a>
 
