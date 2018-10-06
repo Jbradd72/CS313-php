@@ -20,13 +20,13 @@ require 'week3-nav.php';
 <body>
     <div class="container">
         <div class="col-lg-9">
-            <ul>
+            <table>
                 <?php 
                 foreach($_SESSION as $key=>$value) {
-                    echo "<li id='$key'> $key - $value <button class='btn btn-danger btn-sm'>Remove Item</button></li>";
+                    echo "<tr id='$key'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm'>Remove Item</button></td></tr>";
                 }
             ?>
-            </ul>
+            </table>
 
         </div>
 
