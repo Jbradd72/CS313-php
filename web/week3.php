@@ -107,12 +107,12 @@ $_SESSION[$key] = $value;
               <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="https://www.seriouseats.com/2018/06/20180625-no-churn-vanilla-ice-cream-vicky-wasik-13.jpg" alt=""></a>
                 <div class="card-body">
-                  <h4 class="card-title">
+                  <h4 id="ic" class="card-title">
                     <a href="#">Ice Cream</a>
                   </h4>
                   <h5>$4.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                    <a href="week3.php?key=Ice%20Cream&value=$4.99"><button class="btn btn-success">Add to Cart</button></a>
+                    <a href="week3.php?key=Ice%20Cream&value=$4.99#ic"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -124,12 +124,12 @@ $_SESSION[$key] = $value;
               <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsIBDgmMCNQLbiyetId_I79SkZG0vgj0SL48wBmg4pxrY0ZEi1" alt=""></a>
                 <div class="card-body">
-                  <h4 class="card-title">
+                  <h4 id="hd" class="card-title">
                     <a href="#">Heart Disease</a>
                   </h4>
                   <h5>$24.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                    <a href="week3.php?key=Heart%20Disease&value=$24.99"><button class="btn btn-success">Add to Cart</button></a>
+                    <a href="week3.php?key=Heart%20Disease&value=$24.99#hd"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
