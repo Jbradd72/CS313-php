@@ -27,8 +27,7 @@ require 'week3-nav.php';
                 <?php 
                 foreach($_SESSION as $key=>$value) {
                     if(isset($value)){
-                        $id = str_replace(' ', '', $key);
-                    echo "<tr id='$id'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm' onclick=\"removeItem($id)\">Remove Item</button></td></tr>";
+                    echo "<tr><td> $key - $value</td><td><a href='week3-cart-remove.php?key=$key'><button class='btn btn-danger btn-sm'>Remove Item</button></a></td></tr>";
                     }
                 }
             ?>
