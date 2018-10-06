@@ -20,6 +20,7 @@ session_start();
 
 <body>
     <?php require 'week3-nav.php'?>;
+    
     <div class="container">
             <table>
                 <th>
