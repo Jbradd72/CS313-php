@@ -1,13 +1,13 @@
 <?php 
 session_start();
 
-    if(isset($_POST['fname']) && isset($_POST['lname'])){
-        $name = htmlspecialchars($_POST['fname']) . " " . htmlspecialchars($_POST['lname']);
+    if(isset($_GET['fname']) && isset($_GET['lname'])){
+        $name = htmlspecialchars($_GET['fname']) . " " . htmlspecialchars($_GET['lname']);
     }
 
-    if(isset($_POST['addr1']) && isset($_POST['addr2']) && isset($_POST['addr3'])){
-            $addr = htmlspecialchars($_POST['addr1']) . " " . htmlspecialchars($_POST['addr2']) . " " . 
-                htmlspecialchars($_POST['addr3']);
+    if(isset($_GET['addr1']) && isset($_GET['addr2']) && isset($_GET['addr3'])){
+            $addr = htmlspecialchars($_GET['addr1']) . " " . htmlspecialchars($_GET['addr2']) . " " . 
+                htmlspecialchars($_GET['addr3']);
         }
     if(isset($name)){
         $_SESSION['name'] = $name;

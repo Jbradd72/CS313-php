@@ -1,4 +1,4 @@
-
+<?php
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +21,7 @@
 
 <body>
     <?php require 'week3-nav.php'; ?>
-    <form class="form-signup" action="week3-confirmation.php" method="post">
+    <form class="form-signup" action="week3-confirmation.php" method="get">
 
         <div class="row">
             <div class="col">
@@ -38,5 +38,5 @@
     </form>
 
 
-    <?php require 'week3-footer.css'; ?>
+    <?php require 'week3-footer.php'; ?>
 </body>
