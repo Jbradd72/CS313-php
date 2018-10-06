@@ -27,7 +27,7 @@ require 'week3-nav.php';
                 <?php 
                 foreach($_SESSION as $key=>$value) {
                     if(isset($value)){
-                    echo "<tr id=". str_replace(' ', '', key).";'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm' onclick=\"removeItem(". str_replace(' ', '', key).")\">Remove Item</button></td></tr>";
+                    echo "<tr id=". str_replace(' ', '', $key).";'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm' onclick=\"removeItem(". str_replace(' ', '', $key).")\">Remove Item</button></td></tr>";
                     }
                 }
             ?>
