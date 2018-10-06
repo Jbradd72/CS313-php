@@ -21,6 +21,9 @@ require 'week3-nav.php';
 <body>
     <div class="container">
             <table>
+                <th>
+                
+                </th>
                 <?php 
                 foreach($_SESSION as $key=>$value) {
                     if(isset($value)){
