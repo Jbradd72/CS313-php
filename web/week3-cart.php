@@ -15,6 +15,7 @@ require 'week3-nav.php';
     <link href="week3.css" rel="stylesheet">
     
     <script src="jquery-3.3.1.js"></script>
+    <script src="week3-cart.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@ require 'week3-nav.php';
                 <?php 
                 foreach($_SESSION as $key=>$value) {
                     if(isset($value)){
-                    echo "<tr id='$key'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm'>Remove Item</button></td></tr>";
+                    echo "<tr id='$key'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm' onClick='removeItem($key)'>Remove Item</button></td></tr>";
                     }
                 }
             ?>
