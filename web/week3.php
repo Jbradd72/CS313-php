@@ -30,7 +30,7 @@ $_SESSION["Products"][$key] = $value;
 
     <?php require 'week3-nav.php';?>
     <!-- Page Content -->
-    <div class="container" style="margin-top: 5%;">
+    <div class="container" >
 
           <div class="row">
 

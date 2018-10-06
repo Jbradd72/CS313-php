@@ -21,6 +21,7 @@
 
 <body>
     <?php require 'week3-nav.php'; ?>
+    <div class="container">
     <form class="form-signup" action="week3-confirmation.php" method="get">
 
         <div class="row">
@@ -36,6 +37,7 @@
         <input type="text" name="addr3" class="form-control" placeholder="Zip Code" required><br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Confirm Address</button>
     </form>
+    </div>
 
 
     <?php require 'week3-footer.php'; ?>

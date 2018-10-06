@@ -48,7 +48,7 @@ session_start();
                 <?php 
                 foreach($_SESSION["Products"] as $key=>$value) {
                     if(isset($value)){
-                    echo "<tr><td> $key</td> <td> $value</td><td><a href='week3-cart-remove.php?key=$key'><button class='btn btn-danger btn-sm'>Remove Item</button></a></td></tr>";
+                    echo "<tr><td> $key</td> <td> $value</td></tr>";
                     }
                 }
             ?>
