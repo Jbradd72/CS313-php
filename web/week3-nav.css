@@ -2,7 +2,7 @@ button{
 display:inline !important;
 padding:0;
 }
-div{
+#container{
     text-align: center;
 }
 
