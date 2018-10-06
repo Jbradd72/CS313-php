@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <?php require 'week3-nav.css'; ?>
+    <?php require 'week3-nav.php'; ?>
     <form class="form-signup" action="week3-confirmation.php" method="post">
 
         <div class="row">
