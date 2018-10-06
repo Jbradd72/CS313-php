@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-<?php require 'week3-nav.php'?>;
+ require 'week3-nav.php';
 ?>
 
 <html>
@@ -19,7 +19,6 @@ session_start();
 </head>
 
 <body>
-    
     
     <div class="container">
             <table>
