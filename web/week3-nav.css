@@ -9,3 +9,7 @@ table{
 body{
     text-align: center;
 }
+
+.footer{
+    position:fixed !important;
+}
