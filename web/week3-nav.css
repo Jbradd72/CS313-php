@@ -2,8 +2,8 @@ button{
 display:inline !important;
 padding:0;
 }
-#container{
-    text-align: center;
+table{
+    margin: auto;
 }
 
 body{
