@@ -12,6 +12,7 @@ require 'week3-nav.php';
 
     <!-- Custom styles for this template -->
     <link href="week3-nav.css" rel="stylesheet">
+    <link href="week3.css" rel="stylesheet">
     
     <script src="jquery-3.3.1.js"></script>
 </head>
