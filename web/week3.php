@@ -1,6 +1,9 @@
 <?php
 // Start the session
 session_start();
+$key = $_GET['key'];
+$value = $_GET['value'];
+$_SESSION[$key] = $value;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,10 +39,12 @@ session_start();
                 <a href="#"><img class="card-img-top" src="https://www.deseretnews.com/images/article/hires/1808816/1808816.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Fries</a>
+                    <a href="#">French Fries</a>
                   </h4>
                   <h5>$4.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                    
+                    <a href="week3.php?key=French%20Fries&value=$4.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -56,6 +61,7 @@ session_start();
                   </h4>
                   <h5>$12.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                    <a href="week3.php?key=Chicken%20and%20Rice&value=$124.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -72,6 +78,7 @@ session_start();
                   </h4>
                   <h5>$9.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                    <a href="week3.php?key=Fried%20Chicken&value=$9.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -88,6 +95,7 @@ session_start();
                   </h4>
                   <h5>$124.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                    <a href="week3.php?key=Thanksgiving%20Turkey&value=$124.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -104,6 +112,7 @@ session_start();
                   </h4>
                   <h5>$4.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                    <a href="week3.php?key=Ice%20Cream&value=$4.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -120,6 +129,7 @@ session_start();
                   </h4>
                   <h5>$24.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                    <a href="week3.php?key=Heart%20Disease&value=$24.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -133,7 +143,7 @@ session_start();
         </div>
         <!-- /.col-lg-9 -->
 
-    <?php require 'footer'?>
+    <?php require 'footer'; ?>
 
     
 
