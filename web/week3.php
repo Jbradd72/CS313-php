@@ -90,12 +90,12 @@ $_SESSION[$key] = $value;
               <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/divinity2/images/3/36/Turkey_Dish_%28D2_food_item%29.png/revision/latest?cb=20150524200108" alt=""></a>
                 <div class="card-body">
-                  <h4 class="card-title">
+                  <h4 id="turkey" class="card-title">
                     <a href="#">Thanksgiving Turkey</a>
                   </h4>
                   <h5>$124.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                    <a href="week3.php?key=Thanksgiving%20Turkey&value=$124.99"><button class="btn btn-success">Add to Cart</button></a>
+                    <a href="week3.php?key=Thanksgiving%20Turkey&value=$124.99#turkey"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
