@@ -22,7 +22,9 @@ require 'week3-nav.php';
             <table>
                 <?php 
                 foreach($_SESSION as $key=>$value) {
+                    if(isset($value)){
                     echo "<tr id='$key'><td> $key - $value</td><td> <button class='btn btn-danger btn-sm'>Remove Item</button></td></tr>";
+                    }
                 }
             ?>
             </table>
