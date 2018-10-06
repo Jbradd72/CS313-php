@@ -19,7 +19,7 @@ session_start();
 </head>
 
 <body>
-    require 'week3-nav.php';
+    <?php require 'week3-nav.php'?>;
     <div class="container">
             <table>
                 <th>
