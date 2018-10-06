@@ -21,7 +21,7 @@ require 'week3-nav.php';
             <ul>
                 <?php 
                 foreach($_SESSION as $key=>$value) {
-                    echo "<li> $key - $value </li>";
+                    echo "<li id='$key'> $key - $value </li><br><button class='btn btn-danger' onClick='removeItem($key)'>Remove</button>";
                 }
             ?>
             </ul>
