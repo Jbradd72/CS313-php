@@ -19,7 +19,6 @@ require 'week3-nav.php';
 
 <body>
     <div class="container">
-        <div class="col-lg-9">
             <table>
                 <?php 
                 foreach($_SESSION as $key=>$value) {
@@ -30,7 +29,6 @@ require 'week3-nav.php';
 
         </div>
 
-    </div>
 
 </body>
 
