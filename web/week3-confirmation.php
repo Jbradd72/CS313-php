@@ -36,6 +36,26 @@ session_start();
     <body>
         <?php require "week3-nav.php";  ?>
     
+        <div class="container">
+            <table>
+                <th>
+                
+                </th>
+                <?php 
+                foreach($_SESSION["Products"] as $key=>$value) {
+                    if(isset($value)){
+                    echo "<tr><td> $key - $value</td><td><a href='week3-cart-remove.php?key=$key'><button class='btn btn-danger btn-sm'>Remove Item</button></a></td></tr>";
+                    }
+                }
+            ?>
+            </table>
+            
+            <h4> Will be sent to: </h4>
+            <h6> <?php $_SESSION['name'] . " at " . $_SESSION['addr']?></h6>
+        
+        <a id="checkout" href="week3-checkout.php"><button class="btn-info">Checkout</button></a>
+
+        </div>
         
         <?php require "week3-footer.php";  ?>
     </body>

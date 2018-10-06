@@ -25,7 +25,7 @@ require 'week3-nav.php';
                 
                 </th>
                 <?php 
-                foreach($_SESSION as $key=>$value) {
+                foreach($_SESSION["Products"] as $key=>$value) {
                     if(isset($value)){
                     echo "<tr><td> $key - $value</td><td><a href='week3-cart-remove.php?key=$key'><button class='btn btn-danger btn-sm'>Remove Item</button></a></td></tr>";
                     }
