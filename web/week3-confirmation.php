@@ -12,6 +12,10 @@ session_start();
     if(isset($name)){
         $_SESSION['name'] = $name;
     }
+
+    if(isset($addr)){
+        $_SESSION['addr'] = $addr;
+    }  
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +27,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Shop Homepage</title>
+    <title>Confirmation Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +57,7 @@ session_start();
             <h4> Will be sent to: </h4>
             <h6> <?php $_SESSION['name'] . " at " . $_SESSION['addr']?></h6>
         
-        <a id="checkout" href="week3-checkout.php"><button class="btn-info">Checkout</button></a>
+        <a id="checkout" href="week3.php"><button class="btn-info">Submit</button></a>
 
         </div>
         

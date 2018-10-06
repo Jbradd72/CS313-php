@@ -61,7 +61,7 @@ $_SESSION["Products"][$key] = $value;
                   </h4>
                   <h5>$12.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                    <a href="week3.php?key=Chicken%20and%20Rice&value=$124.99"><button class="btn btn-success">Add to Cart</button></a>
+                    <a href="week3.php?key=Chicken%20and%20Rice&value=$12.99"><button class="btn btn-success">Add to Cart</button></a>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
