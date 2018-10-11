@@ -1,31 +1,33 @@
 
-CREATE DATABASE scrapbook
+CREATE DATABASE scrapbook;
 
-CREATE TABLE scrapbook.accounts(
-	accountID int SERIAL NOT NULL PRIMARY,
+\c scrapbook
+
+CREATE TABLE accounts(
+	accountID SERIAL PRIMARY KEY,
 	username varchar(32) NOT NULL UNIQUE,
 	password varchar(64) NOT NULL,
 	name   varchar(64)   NOT NULL,
-	joinDate date,
+	joinDate date
 );
 
-CREATE TABLE scrapbook.photo(
-	photoID int SERIAL NOT NULL PRIMARY,
-	accountID int REFERENCES scrapbook.accounts(accountID),
+CREATE TABLE photo(
+	photoID SERIAL PRIMARY KEY,
+	accountID int REFERENCES accounts(accountID),
 	fileName varchar(255) NOT NULL,
 	size int NOT NULL
 );
 
-CREATE TABLE scrapbook.video(
-	videoID int SERIAL NOT NULL PRIMARY,
-	accountID int REFERENCES scrapbook.accounts(accountID),
+CREATE TABLE video(
+	videoID SERIAL PRIMARY KEY,
+	accountID int REFERENCES accounts(accountID),
 	fileName varchar(255) NOT NULL,
 	size int NOT NULL
 );
 
-CREATE TABLE scrapbook.document(
-	docID int SERIAL NOT NULL PRIMARY,
-	accountID int REFERENCES scrapbook.accounts(accountID),
+CREATE TABLE document(
+	docID SERIAL PRIMARY KEY,
+	accountID int REFERENCES accounts(accountID),
 	fileName varchar(255) NOT NULL,
 	size int NOT NULL
 );
