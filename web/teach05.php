@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <h2>Scripture References</h2>
+    <h2>Scripture Resources</h2>
     <?php try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -24,7 +24,7 @@
     
     foreach ($db->query('SELECT * FROM scriptures') as $row)
     {
-        echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . $row['content'];
+        echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . $row['content'] . '<br>';
     }
 }
 catch (PDOException $ex)
