@@ -7,7 +7,8 @@
 <body>
     <h2>Scripture Resources</h2>
     <?php
-    $book = $_POST['book'];
+    $book = ucfirst($_POST['book']);
+    $book = str_replace($book, 'And', 'and');
     try
 {
   $dbUrl = getenv('DATABASE_URL');
