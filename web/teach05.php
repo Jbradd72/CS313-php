@@ -9,6 +9,7 @@
     <?php
     $book = ucfirst($_POST['book']);
     $book = str_replace($book, 'And', 'and');
+    echo $book;
     try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -28,13 +29,13 @@
   if (isset($book)){
       foreach ($db->query("SELECT id,book,chapter,verse FROM scriptures where book = $book") as $row)
     {
-        echo '<a href="scripture-details.php?id=' . $row['id'] . '"<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . '</a><br>';
+        echo '<a href="scripture-details.php?id=' . $row['id'] . '"<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . '</b>' . '</a><br>';
     }
   }
   else{
     foreach ($db->query('SELECT id,book,chapter,verse FROM scriptures') as $row)
     {
-     echo '<a href="scripture-details.php?id=' . $row['id'] . '"<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . '</a><br>';   
+     echo '<a href="scripture-details.php?id=' . $row['id'] . '"><b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . '</b>' . '</a><br>';   
         
     }
   }
