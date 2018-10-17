@@ -6,7 +6,9 @@
 
 <body>
     <h2>Scripture Resources</h2>
-    <?php try
+    <?php
+    $book = $_POST['book'];
+    try
 {
   $dbUrl = getenv('DATABASE_URL');
 
@@ -21,11 +23,20 @@
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    foreach ($db->query('SELECT * FROM scriptures') as $row)
+        
+  if (isset($book)){
+      foreach ($db->query("SELECT id,book,chapter,verse FROM scriptures where book = $book") as $row)
     {
-        echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . $row['content'] . '<br>';
+        echo '<a href="scripture-details.php?id=$row['id']"<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . '</a><br>';
     }
+  }
+  else{
+    foreach ($db->query('SELECT id,book,chapter,verse FROM scriptures') as $row)
+    {
+        echo '<a href="scripture-details.php?id=$row['id']"<b>' . $row['book'] . ' ' . $row['chapter'] . ' : ' . $row['verse'] . ' - </b>' . '</a><br>';
+        
+    }
+  }
 }
 catch (PDOException $ex)
 {
@@ -34,6 +45,16 @@ catch (PDOException $ex)
 }
 
 ?>
+   <br> <h2> Scripture Search:</h2>
+    
+<form action="/teach05.php" method="post">
+  Book:<br>
+  <input type="text" name="book" value="">
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>    
+    
 </body>
 
 
