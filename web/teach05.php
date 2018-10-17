@@ -8,7 +8,7 @@
     <h2>Scripture Resources</h2>
     <?php
     $book = ucfirst($_POST['book']);
-    $book = str_replace($book, 'And', 'and');
+    str_replace($book, 'And', 'and');
     echo $book;
     try
 {
