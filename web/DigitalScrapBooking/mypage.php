@@ -20,17 +20,14 @@
         
         <?php 
         echo $_SESSION['username'];
-        $video = $db->query("SELECT accounts.username, video.filename AS file FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
+        $video = $db->query("SELECT accounts.username, video.filename AS filename FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
         
         while($row = $video->fetch(PDO::FETCH_ASSOC)){
-            echo $row['file'];
-        }
-
-    /*  <div class="row text-center">
+            echo " <div class='row text-center'>
 
         <div class='col-lg'>
           <div class='card'>
-              <video controls class='card-img-top' src='jeffbradley/bom.mp4' alt=''></video>
+              <video controls class='card-img-top' src='$row["username"]/$row["filename"]' alt=''></video>
             <div class='card-body'>
               <h4 class='card-title'>Card title</h4>
               <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
