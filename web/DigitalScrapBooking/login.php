@@ -4,6 +4,9 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
+if (isset($username) && isset($password)){
+    echo "username : $username and password: $password";
+}
 $count = $db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\'');
    foreach($db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\'') as $row){
        echo "id: " . $row['accountid'];   } 
