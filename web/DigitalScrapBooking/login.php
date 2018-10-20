@@ -14,7 +14,7 @@ if($results['total'] == 1){
     
 }
 else{
-    echo $results['total'];
+    $error = "You entered an incorrect username or password.";
 }
 if (isset($_SESSION['username'])){
     header('location: mypage.php');
@@ -42,5 +42,6 @@ if (isset($_SESSION['username'])){
         </label>
         </div>
         <input class="btn btn-lg btn-primary btn-block" style="" type="submit" value="Sign in">
+        <p style="color:red"><?php echo $error?></p>
     </form>
 <?php require ('footer.php; ?') ?>
