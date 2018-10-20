@@ -5,10 +5,10 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 $count = $db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\'');
-    
-if ($count == 1){
+   echo $db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\''); 
+/*if ($count == 1){
     echo "<h1>yeah buddy!</h1>";
-}
+}*/
 ?>
     <hr>
 
