@@ -7,9 +7,11 @@
 $count = $db->query("SELECT COUNT(accountid) AS total FROM accounts WHERE username = '$username' AND password = '$password'"); 
 $results = $count->fetch(PDO::FETCH_ASSOC);
 
+echo $username . $password;
+
 if($results['total'] == 1){
     $_SESSION['username'] = $username;
-    header('location: mypage.php');
+    //header('location: mypage.php');
     echo $username;
     
 }
