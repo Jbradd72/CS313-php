@@ -1,26 +1,29 @@
 <?php 
     require ('dbconfig.php');
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$count = $db->query("SELECT COUNT(accountid) AS total FROM accounts WHERE username = '$username' AND password = '$password'"); 
-$results = $count->fetch(PDO::FETCH_ASSOC);
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+         $count = $db->query("SELECT COUNT(accountid) AS total FROM accounts WHERE username = '$username' AND password = '$password'"); 
+         $results = $count->fetch(PDO::FETCH_ASSOC);
 
 
-if($results['total'] == 1){
-    $_SESSION['username'] = $username;
-    
-    
-}
-else{
-    $error = "You entered an incorrect username or password.";
-}
-if (isset($_SESSION['username'])){
-    header('location: mypage.php');
-}
+        if($results['total'] == 1){
+            $_SESSION['username'] = $username;
 
-    require ('header.php');
+
+        }
+        else{
+            $error = "You entered an incorrect username or password.";
+        }
+        if (isset($_SESSION['username'])){
+            header('location: mypage.php');
+        }
+     }
+
+        require ('header.php');
 
 //echo "count: " . $results['total'];
 /*if ($count == 1){
