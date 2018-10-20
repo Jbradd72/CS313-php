@@ -18,7 +18,6 @@ else{
 }
 if (isset($_SESSION['username'])){
     header('location: mypage.php');
-    die();
 }
 
     require ('header.php');
