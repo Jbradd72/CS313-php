@@ -10,14 +10,17 @@ $results = $count->fetch(PDO::FETCH_ASSOC);
 
 if($results['total'] == 1){
     $_SESSION['username'] = $username;
-     ob_start();
-    //header('location: mypage.php');
-    ob_flush();
-    //die();
+    
     
 }
 else{
     echo $results['total'];
+}
+if (isset($_SESSION['username'])){
+     ob_start();
+    header('location: mypage.php');
+    ob_flush();
+    die();
 }
 
     require ('header.php');
