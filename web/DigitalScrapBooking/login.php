@@ -8,7 +8,9 @@ $count = $db->query("SELECT COUNT(accountid) AS total FROM accounts WHERE userna
 $results = $count->fetch(PDO::FETCH_ASSOC);
 
 if($results['total'] == 1){
+    $_SESSION['username'] = $username;
     header('location: mypage.html');
+    
 }
 else{
     echo "nope";
