@@ -7,7 +7,7 @@
 if (isset($username) && isset($password)){
     echo "username : $username and password: $password";
 }
-$count = $db->query('SELECT accountid FROM accounts WHERE username = \'$username\' AND password = \'$password\''); 
+$count = $db->query("SELECT accountid FROM accounts WHERE username = '$username' AND password = '$password'"); 
 
 
 while ($row = $count->fetch(PDO::FETCH_ASSOC))
