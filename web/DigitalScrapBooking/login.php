@@ -9,7 +9,7 @@ $results = $count->fetch(PDO::FETCH_ASSOC);
 
 if($results['total'] == 1){
     $_SESSION['username'] = $username;
-    header('location: mypage.html');
+    header('location: mypage.php');
     
 }
 else{
