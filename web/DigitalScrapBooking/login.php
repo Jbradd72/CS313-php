@@ -25,9 +25,6 @@
 
         require ('header.php');
 
-//echo "count: " . $results['total'];
-/*if ($count == 1){
-    echo "<h1>yeah buddy!</h1>";
 }*/
 ?>
     <hr>
