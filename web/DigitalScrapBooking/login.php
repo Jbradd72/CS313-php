@@ -4,16 +4,13 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-if (isset($username) && isset($password)){
-    echo "username : $username and password: $password";
-}
+
 $count = $db->query("SELECT COUNT(accountid) AS total FROM accounts WHERE username = '$username' AND password = '$password'"); 
+$results = $count->fetch(PDO::FETCH_ASSOC);
+
+echo $results['total'];
 
 
-while ($row = $count->fetch(PDO::FETCH_ASSOC))
-{
-  echo 'total: ' . $row['total'] . '<br/>';
-}
 //echo "count: " . $results['total'];
 /*if ($count == 1){
     echo "<h1>yeah buddy!</h1>";
