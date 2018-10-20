@@ -10,7 +10,8 @@ $results = $count->fetch(PDO::FETCH_ASSOC);
 
 if($results['total'] == 1){
     $_SESSION['username'] = $username;
-    header('location: mypage.php');
+    //header('location: mypage.php');
+    echo "count right";
     
 }
 else{
