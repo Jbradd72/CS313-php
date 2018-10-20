@@ -26,4 +26,4 @@ if ($count == 1){
         </div>
         <input class="btn btn-lg btn-primary btn-block" style="" type="submit" value="Sign in">
     </form>src
-<?php require ('footer.php; ?')>
+<?php require ('footer.php; ?') ?>
