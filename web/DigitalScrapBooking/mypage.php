@@ -27,7 +27,7 @@
 
         <div class='col-lg'>
           <div class='card'>
-              <video controls class='card-img-top' src='$row["username"]/$row["filename"]' alt=''></video>
+              <video controls class='card-img-top' src='".$row["username"]."/".$row["filename"]."' alt=''></video>
             <div class='card-body'>
               <h4 class='card-title'>Card title</h4>
               <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
