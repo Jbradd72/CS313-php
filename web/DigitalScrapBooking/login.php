@@ -5,7 +5,8 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 $count = $db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\'');
-   echo $db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\''); 
+   foreach($db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\'') as $row){
+       echo "id: " . $row['accountid'];   } 
 /*if ($count == 1){
     echo "<h1>yeah buddy!</h1>";
 }*/
