@@ -8,9 +8,8 @@ if (isset($username) && isset($password)){
     echo "username : $username and password: $password";
 }
 $count = $db->query('SELECT COUNT(accountid) FROM accounts WHERE username = \'$username\' AND password = \'$password\''); 
-echo "count: $count";
-   foreach($db->query("SELECT COUNT(accountid) FROM accounts WHERE username = '$username' AND password = '$password'") as $row){
-       echo "id: " . $row['accountid'];   } 
+if(isset($count)){
+echo "count: $count";}
 /*if ($count == 1){
     echo "<h1>yeah buddy!</h1>";
 }*/
