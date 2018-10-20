@@ -10,7 +10,9 @@ $results = $count->fetch(PDO::FETCH_ASSOC);
 
 if($results['total'] == 1){
     $_SESSION['username'] = $username;
-    //header('location: mypage.php');
+     ob_start();
+    header('location: mypage.php');
+    ob_flush();
     die();
     
 }
@@ -40,5 +42,5 @@ else{
         </label>
         </div>
         <input class="btn btn-lg btn-primary btn-block" style="" type="submit" value="Sign in">
-    </form>src
+    </form>
 <?php require ('footer.php; ?') ?>
