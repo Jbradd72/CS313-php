@@ -1,5 +1,11 @@
 
-<?php require('dbconfig.php');
+<?php 
+    require('dbconfig.php');
+    if (!isset($_SESSION['username'])){
+        header('location: login.php');
+    }
+
+
    require('header.php');
 ?>
 
@@ -13,12 +19,12 @@
       </header>
         
         <?php 
-        echo $_SESSION['username'];?> <?php
+        echo $_SESSION['username'];
         $video = $db->query("SELECT accounts.username, video.filename FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
         
-       /* while($row = $video->fetch(PDO::FETCH_ASSOC)){
+        while($row = $video->fetch(PDO::FETCH_ASSOC)){
             echo $row['video.filename'];
-        }*/
+        }
 
     /*  <div class="row text-center">
 
