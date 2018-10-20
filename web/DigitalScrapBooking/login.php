@@ -1,6 +1,5 @@
 <?php 
     require ('dbconfig.php');
-    require ('header.php');
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -8,8 +7,14 @@
 $count = $db->query("SELECT COUNT(accountid) AS total FROM accounts WHERE username = '$username' AND password = '$password'"); 
 $results = $count->fetch(PDO::FETCH_ASSOC);
 
-echo $results['total'];
+if($results['total'] == 1){
+    header('location: mypage.html');
+}
+else{
+    echo "nope";
+}
 
+    require ('header.php');
 
 //echo "count: " . $results['total'];
 /*if ($count == 1){
