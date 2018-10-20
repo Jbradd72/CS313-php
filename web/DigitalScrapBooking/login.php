@@ -11,9 +11,9 @@ $results = $count->fetch(PDO::FETCH_ASSOC);
 if($results['total'] == 1){
     $_SESSION['username'] = $username;
      ob_start();
-    header('location: mypage.php');
+    //header('location: mypage.php');
     ob_flush();
-    die();
+    //die();
     
 }
 else{
