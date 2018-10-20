@@ -13,7 +13,7 @@
       </header>
         
         <?php 
-        echo $_SESSION['username'];
+        echo $_SESSION['username'];?> <?php
         $video = $db->query("SELECT accounts.username, video.filename FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
         
        /* while($row = $video->fetch(PDO::FETCH_ASSOC)){
