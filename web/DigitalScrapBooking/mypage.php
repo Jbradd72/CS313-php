@@ -65,8 +65,7 @@
 
         <div class='col-lg'>
           <div class='card'>
-              <img  class='card-img-top' src='
-        https://image.freepik.com/free-icon/text-document_318-48568.jpg' alt=''></img>
+              <iframe  class='card-img-top' src='".$row["username"]."/".$row["filename"]."' alt=''></img>
             <div class='card-body'>
               <a href='".$row["username"]."/".$row["filename"]."'><h4 class='card-title'>".$row["filename"]."</h4></a>
               <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
