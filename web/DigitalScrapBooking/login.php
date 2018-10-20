@@ -1,7 +1,7 @@
 <?php 
     require ('dbconfig.php');
 
-     if($_SERVER["REQUEST_METHOD"] == "POST") {
+     if($_SERVER["REQUEST_METHOD"] == "POST") { 
 
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -25,7 +25,7 @@
 
         require ('header.php');
 
-}*/
+
 ?>
     <hr>
 
