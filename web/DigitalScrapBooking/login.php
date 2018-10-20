@@ -14,7 +14,7 @@ if($results['total'] == 1){
     
 }
 else{
-    echo "nope";
+    echo "count wrong";
 }
 
     require ('header.php');
