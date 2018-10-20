@@ -60,7 +60,7 @@
         </div>";
         }
         
-         while($row = $document->fetch(PDO::FETCH_ASSOC)){
+         while($row = $doc->fetch(PDO::FETCH_ASSOC)){
             echo " <div class='row text-center'>
 
         <div class='col-lg'>
