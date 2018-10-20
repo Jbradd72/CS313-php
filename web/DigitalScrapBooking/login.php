@@ -8,8 +8,13 @@ if (isset($username) && isset($password)){
     echo "username : $username and password: $password";
 }
 $count = $db->query('SELECT COUNT(accountid) as total FROM accounts WHERE username = \'$username\' AND password = \'$password\''); 
-$result = $count->fetch(PDO::FETCH_ASSOC);
-echo "count: " . $results['total'];
+
+
+while ($row = $count->fetch(PDO::FETCH_ASSOC))
+{
+  echo 'total: ' . $row['total'] . '<br/>';
+}
+//echo "count: " . $results['total'];
 /*if ($count == 1){
     echo "<h1>yeah buddy!</h1>";
 }*/
