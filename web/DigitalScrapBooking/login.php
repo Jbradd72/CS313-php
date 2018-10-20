@@ -17,9 +17,7 @@ else{
     echo $results['total'];
 }
 if (isset($_SESSION['username'])){
-     ob_start();
     header('location: mypage.php');
-    ob_flush();
     die();
 }
 
