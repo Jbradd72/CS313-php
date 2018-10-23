@@ -19,7 +19,7 @@ $topics[] = $_GET['topics'];
 
 $insertScripture = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
 
-$scriptureID = $PDO->last_insert_id("scripture_id");
+$scriptureID = $PDO->lastInsertId("scripture_id_seq");
 
 foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
