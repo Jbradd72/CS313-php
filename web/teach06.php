@@ -31,7 +31,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
         $topics = $db->query("SELECT * FROM topics");
         
         
-        while ($row = $topics->fetch("PDO::FETCH_ASSOC")){
+        while ($row = $topics->fetch(PDO::FETCH_ASSOC)){
             echo $row["name"] . ": <input name='topics[]' value='".$row['name']."' type='checkbox'><br>";
         }
         ?>
