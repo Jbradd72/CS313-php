@@ -25,7 +25,8 @@ $scriptureID->execute();
 
 foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
-    $insert = $db->query("INSERT INTO scripturestopics VALUES ($scriptureID, $topicID)");
+    $insert = $db->prepare("INSERT INTO scripturestopics VALUES ($scriptureID, $topicID)");
+    $insert->execute();
 }
 
 $showScriptures = $db->query("select * from scripture");
