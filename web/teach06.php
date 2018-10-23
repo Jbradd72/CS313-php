@@ -28,7 +28,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
         Content: <textarea></textarea><br>
         
         <?php 
-        $topics = $db->query("SELECT name from topics");
+        $topics = $db->query("SELECT * FROM topics");
         
         
         while ($row = $topics->fetch("PDO::FETCH_ASSOC")){
