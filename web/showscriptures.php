@@ -19,7 +19,8 @@ $verse = $_GET['verse'];
 $content = $_GET['content'];
 $topics[] = $_GET['topics'];
 
-$scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ('$book', $chapter, $verse, '$content') RETURNING id");
+$scripture = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ('$book', $chapter, $verse, '$content') RETURNING id");
+$scriptureId = $scripture->fetch(PDO:FETCH_ASSOC);
 
 echo "<h1>".$scriptureId['id']."</h1>";
 
