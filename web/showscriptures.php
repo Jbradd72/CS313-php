@@ -17,8 +17,7 @@ $verse = $_GET['verse'];
 $content = $_GET['content'];
 $topics[] = $_GET['topics'];
 
-$insertScripture = $db->prepare("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
-$insertScripture.execute();
+$insertScripture = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
 
 $scriptureID = $PDO->last_insert_id("scripture_id_seq");
 

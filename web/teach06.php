@@ -21,7 +21,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 <body>
 
 
-    <form action="results.php" method="get">
+    <form action="showscriptures.php" method="get">
         Book: <input type="text" name="book"><br> 
         Chapter: <input type="number" name="chapter"><br> 
         Verse: <input type="number" name="verse"><br> 
