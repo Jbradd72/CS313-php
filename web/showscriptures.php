@@ -18,6 +18,7 @@ $content = $_GET['content'];
 $topics[] = $_GET['topics'];
 
 $scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content) RETURNING id");
+$scriptureID->execute();
 
 
 foreach($topics as $topic){
