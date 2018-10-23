@@ -26,7 +26,7 @@ $scriptureID->execute();
 foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
     $topicIdf = $topicId->fetch(PDO::FETCH_ASSOC);
-    $insert = $db->prepare("INSERT INTO scripturestopics VALUES ($scriptureID," . $topicIdf['topicID'] .")");
+    $insert = $db->prepare("INSERT INTO scripturestopics VALUES (5," . $topicIdf['topicID'] .")");
     $insert->execute();
 }
 
