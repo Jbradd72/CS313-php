@@ -12,12 +12,14 @@ $dbName = ltrim($dbopts["path"],'/');
 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword); 
 
 $book = $_GET['book'];
+
+echo "<h1>$book</h1>";
 $chapter = $_GET['chapter'];
 $verse = $_GET['verse'];
 $content = $_GET['content'];
 $topics[] = $_GET['topics'];
 
-$scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content) RETURNING id");
+$scriptureID = $db->prepare("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content) RETURNING id");
 $scriptureID->execute();
 
 
