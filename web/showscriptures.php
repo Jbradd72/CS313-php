@@ -22,15 +22,14 @@ $topics[] = $_GET['topics'];
 $scripture = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ('$book', $chapter, $verse, '$content') RETURNING id");
 $scriptureId = $scripture->fetch(PDO::FETCH_ASSOC);
 
-echo "<h1>".$scriptureId['id']."</h1>";
 
 
-/*foreach($topics as $topic){
+foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
     $topicIdf = $topicId->fetch(PDO::FETCH_ASSOC);
-    $insert = $db->prepare("INSERT INTO scripturestopics VALUES ($scriptureID," . $topicIdf['topicID'] .")");
+    $insert = $db->prepare("INSERT INTO scripturestopics VALUES (".$scriptureID['id']."," . $topicIdf['topicID'] .")");
     $insert->execute();
-}*/
+}
 
 $showScriptures = $db->query("select * from scripture");
 
