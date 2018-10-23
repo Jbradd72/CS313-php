@@ -19,14 +19,13 @@ $verse = $_GET['verse'];
 $content = $_GET['content'];
 $topics[] = $_GET['topics'];
 
-$scriptureID = $db->prepare("INSERT INTO scripture (book, chapter, verse, content) VALUES ('$book', $chapter, $verse, '$content') RETURNING id");
-$scriptureID->execute();
+$scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ('$book', $chapter, $verse, '$content') RETURNING id");
 
 
 foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
     $topicIdf = $topicId->fetch(PDO::FETCH_ASSOC);
-    $insert = $db->prepare("INSERT INTO scripturestopics VALUES (5," . $topicIdf['topicID'] .")");
+    $insert = $db->prepare("INSERT INTO scripturestopics VALUES ($scriptureID," . $topicIdf['topicID'] .")");
     $insert->execute();
 }
 
