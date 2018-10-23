@@ -17,9 +17,8 @@ $verse = $_GET['verse'];
 $content = $_GET['content'];
 $topics[] = $_GET['topics'];
 
-$insertScripture = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
+$scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content) RETURNING id");
 
-$scriptureID = $PDO->lastInsertId("scripture_id_seq");
 
 foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
