@@ -22,10 +22,10 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 
     <form action="results.php" method="get">
-        Book: <input type="text"><br> 
-        Chapter: <input type="number"><br> 
-        Verse: <input type="number"><br> 
-        Content: <textarea></textarea><br>
+        Book: <input type="text" name="book"><br> 
+        Chapter: <input type="number" name="chapter"><br> 
+        Verse: <input type="number" name="verse"><br> 
+        Content: <textarea name="content"></textarea><br>
         
         <?php 
         $topics = $db->query("SELECT * FROM topics");
@@ -35,7 +35,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
             echo $row["name"] . ": <input name='topics[]' value='".$row['name']."' type='checkbox'><br>";
         }
         ?>
-
+            <input type="submit">
     </form>
     
     
