@@ -24,12 +24,12 @@ $scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content)
 echo $scriptureId['id'];
 
 
-foreach($topics as $topic){
+/*foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
     $topicIdf = $topicId->fetch(PDO::FETCH_ASSOC);
     $insert = $db->prepare("INSERT INTO scripturestopics VALUES ($scriptureID," . $topicIdf['topicID'] .")");
     $insert->execute();
-}
+}*/
 
 $showScriptures = $db->query("select * from scripture");
 
