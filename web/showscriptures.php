@@ -21,6 +21,8 @@ $topics[] = $_GET['topics'];
 
 $scriptureID = $db->query("INSERT INTO scripture (book, chapter, verse, content) VALUES ('$book', $chapter, $verse, '$content') RETURNING id");
 
+echo $scriptureId['id'];
+
 
 foreach($topics as $topic){
     $topicId = $db->query("select topicId from topics where topics.name = '$topic'");
