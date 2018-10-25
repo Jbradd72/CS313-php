@@ -21,6 +21,6 @@
         <button class="btn btn-lg btn-primary btn-block" style="width:25%; margin:auto;" type="submit">Sign Up</button>
     </form>
 
-<?php require footer.php; ?>
+<?php require ('footer.php'); ?>
 
 
