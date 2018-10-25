@@ -4,7 +4,7 @@
 <h1 class="h1 mb-1 font-weight-normal" style="text-align: center">Sign Up!</h1>
     <hr>
 
-    <form class="form-signup" action="" method="get" style="width:75%; margin: auto;">
+    <form class="form-signup" action="registerUser.php" method="post" style="width:75%; margin: auto;">
         
         <div class="row">
             <div class="col">
@@ -23,3 +23,5 @@
     </form>
 
 <?php require footer.php; ?>
+
+
