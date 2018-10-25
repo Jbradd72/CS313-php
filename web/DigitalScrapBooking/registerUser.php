@@ -19,5 +19,10 @@ $register->execute();
 if (!mkdir("/app/web/DigitalScrapBooking/$username", 0777, true)){
     die("Server failed to create directory");   
 }
+else{
+    $file = fopen("/app/web/DigitalScrapBooking/$username/test1.txt");
+    fwrite($file, "testing");
+    fclose($file);
+}
 header('location: login.php');
 ?>

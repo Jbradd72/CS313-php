@@ -44,4 +44,4 @@
         <input class="btn btn-lg btn-primary btn-block" style="" type="submit" value="Sign in">
         <p style="color:red"><?php echo $error?></p>
     </form>
-<?php require ('footer.php; ?') ?>
+<?php require ('footer.php;') ?>
