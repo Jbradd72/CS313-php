@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $joinDate = date('d-m-y');
 
-$register = $db->prepare("INSERT INTO accounts (username, password, name, joindate, email) VALUES (:username, :password, :name, :joindate, :email)");
+$register = $db->prepare("INSERT INTO accounts (username, password, name, joindate, email) VALUES (:username, :password, :name, $joindate, :email)");
 
 $register->bindparam(':username', $username, PDO::PARAM_STR);
 $register->bindparam(':password', $password, PDO::PARAM_STR);
