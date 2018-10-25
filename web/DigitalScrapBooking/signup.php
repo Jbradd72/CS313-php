@@ -15,7 +15,6 @@
             </div>
         </div><br>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
-        <input type="tel" name="phone"class="form-control" placeholder="Phone Number"><br>
         <input type="text" name="username" id="inputText" class="form-control" placeholder="User Name" required><br>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
         <input type="password" id="inputPasswordConfirm" class="form-control" placeholder="Confirm Password" required><br>
