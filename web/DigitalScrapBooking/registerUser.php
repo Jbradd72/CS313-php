@@ -12,7 +12,6 @@ $register = $db->prepare("INSERT INTO accounts (username, password, name, joinda
 $register->bindparam(':username', $username, PDO::PARAM_STR);
 $register->bindparam(':password', $password, PDO::PARAM_STR);
 $register->bindparam(':name', $name, PDO::PARAM_STR);
-$register->bindparam(':joindate', $joindate, PDO::PARAM_STR);
 $register->bindparam(':email', $username, PDO::PARAM_STR);
 $register->bindparam(':username', $username, PDO::PARAM_STR);
   
