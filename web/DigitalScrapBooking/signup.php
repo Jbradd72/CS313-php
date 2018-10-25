@@ -1,5 +1,5 @@
 <?php 
-    require header.php;
+    require ('header.php');
 ?>
 <h1 class="h1 mb-1 font-weight-normal" style="text-align: center">Sign Up!</h1>
     <hr>
