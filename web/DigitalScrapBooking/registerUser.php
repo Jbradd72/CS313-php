@@ -21,6 +21,10 @@ if (!mkdir("/app/web/DigitalScrapBooking/$username", 0777, true)){
 }
 else{
     $file = fopen("/app/web/DigitalScrapBooking/$username/test1.txt", "w");
+    if ($file === false)
+{
+    die('Could not open file ' . $write_file);
+}
     fwrite($file, "testing");
     fclose($file);
 }
