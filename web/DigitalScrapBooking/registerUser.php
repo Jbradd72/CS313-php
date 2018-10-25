@@ -18,6 +18,6 @@ $register->bindparam(':username', $username, PDO::PARAM_STR);
   
 $register->execute();
 
-mkdir($username)
-header('location: login.php')
+mkdir($username);
+header('location: login.php');
 ?>
