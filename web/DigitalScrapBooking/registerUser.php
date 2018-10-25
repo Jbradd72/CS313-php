@@ -16,6 +16,8 @@ $register->bindparam(':email', $email, PDO::PARAM_STR);
   
 $register->execute();
 
-mkdir($username);
+if (!mkdir("~/web/DigitalScrapBooking/$username", 0777)){
+    die("Server failed to create directory");   
+}
 header('location: login.php');
 ?>
