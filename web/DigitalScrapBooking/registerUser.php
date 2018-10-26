@@ -20,7 +20,7 @@ if (!mkdir("/app/web/DigitalScrapBooking/$username", 0777, true)){
     die("Server failed to create directory");   
 }
 else{
-    $file = fopen("/app/web/DigitalScrapBooking/jeffbradley/test1.txt", "w");
+    $file = fopen("/app/web/DigitalScrapBooking/jeffbradley/test1.txt", "w+");
     if ($file === false)
 {
     die('Could not open file ');
