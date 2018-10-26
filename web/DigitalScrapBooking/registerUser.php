@@ -28,5 +28,4 @@ else{
     fwrite($file, "testing");
     fclose($file);
 }
-header('location: login.php');
 ?>
