@@ -1,5 +1,6 @@
 <?php 
   require('dbconfig.php');
+    require('s3init.php');
 
 $name = $_POST['fname'] . ' ' . $_POST['lname'];
 $username = $_POST['username'];
