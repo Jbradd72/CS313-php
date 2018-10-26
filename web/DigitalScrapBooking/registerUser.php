@@ -23,7 +23,7 @@ else{
     $file = fopen("/app/web/DigitalScrapBooking/jeffbradley/test1.txt", "w");
     if ($file === false)
 {
-    die('Could not open file ' . $write_file);
+    die('Could not open file ');
 }
     fwrite($file, "testing");
     fclose($file);
