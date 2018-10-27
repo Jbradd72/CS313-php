@@ -13,7 +13,7 @@ echo "accountid: $accountId";
 echo "filename: $filename";
 echo "tablename: $table";
 echo "username = $username";
-echo "size = $size"
+echo "size = $size";
 
 $register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($accountid, '$filename', $size)");
   
