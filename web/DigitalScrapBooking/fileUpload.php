@@ -15,7 +15,7 @@ echo "tablename: $table";
 echo "username = $username";
 echo "size = $size";
 
-$register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES (1, 'test', 0)");
+$register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($accountId, 'test1', $size)");
   
 ?>
 <html>
