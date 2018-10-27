@@ -8,6 +8,10 @@ $username = $_SESSION['username'];
 $account = $db->query("SELECT accountid from accounts where username = '$username'");
 $accountFetch =$account->fetch(PDO::FETCH_ASSOC);
 $accountId = $accountFetch['accountid'];
+echo "accountid: $accountId";
+echo "filename: $filename";
+echo "tablename: $table";
+echo "username = $username";
 
 $register = $db->prepare("INSERT INTO $table (accountid, filename) VALUES ($accountid, $filename)");
 
