@@ -61,9 +61,9 @@ $register->execute();
     <input style="margin-top: 5%;" type="file" value="upload" name="fileToUpload" id="fileButton" />
     <br>
      <p><br>Select a file type:</p><select id="filetype" name="type"  >
-  <option value="videos">Video</option>
-  <option value="photos">Photo</option>
-  <option value="documents">Document</option>
+  <option value="video">Video</option>
+  <option value="photo">Photo</option>
+  <option value="document">Document</option>
 </select>
         <input type='submit'>
         </form>
