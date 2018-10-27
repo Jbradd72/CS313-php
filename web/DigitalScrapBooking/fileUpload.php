@@ -43,6 +43,10 @@ $register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($
                     else
                     echo "<a class='nav-link' href='login.php'>Login <span class='sr-only'></span></a>"; ?>
                 </li>
+                
+                <li>
+                    <a class="nav-link" href="fileUpload.php">Save files <span class="sr-only">(current)</span></a>
+                </li>
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
