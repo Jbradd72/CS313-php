@@ -43,6 +43,7 @@
   <option value="photos">Photo</option>
   <option value="documents">Document</option>
 </select>
+    
 
     <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
     <script>
@@ -59,28 +60,15 @@
         
         var uploader = document.getElementById("uploader");
         var fileButton = document.getElementById("fileButton");
-        var showButton = document.getElementById("showPic");
-        
-        showButton.addEventListener("click", function(){
-            var storageRef = firebase.storage().ref('username/usa.png');
-            var URL = "1-";
-            storageRef.getDownloadURL().then(function(url){
-                                document.getElementById("pic").src=url;
-                var test = url;
-               
-
-            });
-            
-            alert(test);
-                
-        });
+        var type = document.getElementById("filetype").value;
+    
         
         
         
     fileButton.addEventListener("change", function(e){
           var file = e.target.files[0];
         
-        var storageRef = firebase.storage().ref('username/' + file.name);
+        var storageRef = firebase.storage().ref('username/'+ type +'/' + file.name);
         
         var task = storageRef.put(file);
         
