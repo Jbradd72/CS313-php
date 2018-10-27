@@ -9,13 +9,9 @@ $username = $_SESSION['username'];
 $account = $db->query("SELECT accountid from accounts where username = '$username'");
 $accountFetch =$account->fetch(PDO::FETCH_ASSOC);
 $accountId = $accountFetch['accountid'];
-echo "accountid: $accountId";
 echo "filename: $filename";
-echo "tablename: $table";
-echo "username = $username";
-echo "size = $size";
 
-$register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($accountId, 'test1', $size)");
+$register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($accountId, '".$filename."', $size)");
   
 ?>
 <html>
