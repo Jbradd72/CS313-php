@@ -1,3 +1,21 @@
+<?php require ('dbconfig.php');
+   if (!isset($_SESSION['username'])) header("location: login.php");
+
+$table = $_POST['type'];
+$filename = $_FILES['fileToUpload']['name'];
+$username = $_SESSION['username'];
+
+$account = $db->query("SELECT accountid from accounts where )
+
+$register = $db->prepare("INSERT INTO accounts (username, password, name, joindate, email) VALUES (:username, :password, :name, CURRENT_DATE, :email)");
+
+$register->bindparam(':username', $username, PDO::PARAM_STR);
+$register->bindparam(':password', $password, PDO::PARAM_STR);
+$register->bindparam(':name', $name, PDO::PARAM_STR);
+$register->bindparam(':email', $email, PDO::PARAM_STR);
+  
+$register->execute();
+?>
 <html>
 
 <head>
@@ -35,14 +53,17 @@
             </form>
         </div>
     </nav>
+    
+    <form method="post" action="" >
     <progress style="margin-top: 15%;" value="0" max="100" id="uploader">0%</progress><br>
-    <input style="margin-top: 5%;" type="file" value="upload" id="fileButton" />
+    <input style="margin-top: 5%;" type="file" value="upload" name="fileToUpload" id="fileButton" />
     <br>
-     <p><br>Select a file type:</p><select id="filetype"  >
+     <p><br>Select a file type:</p><select id="filetype" name="type"  >
   <option value="videos">Video</option>
   <option value="photos">Photo</option>
   <option value="documents">Document</option>
 </select>
+        </form>
     
 
     <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
