@@ -65,7 +65,7 @@ $register->execute();
   <option value="photos">Photo</option>
   <option value="documents">Document</option>
 </select>
-        <submit>Submit</submit>
+        <input type='submit'>
         </form>
     
 
