@@ -1,0 +1,5 @@
+            function loadFile(username, filename){
+            var storageRef = firebase.storage().ref(username + '/' + filename);
+            var URL = storageRef.getDownloadURL().then(function(url){
+                                document.getElementById("pic").src=url;
+}

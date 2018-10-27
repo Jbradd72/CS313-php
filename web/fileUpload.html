@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="utf-9">
+    <title File Upload></title>
+    <style media="screen"></style>
+</head>
+
+<body>
+    <progress value="0" max="100" id="uploader">0%</progress>
+    <input type="file" value="upload" id="fileButton" />
+    <br><br><br>
+    
+    <button id="showPic">Click</button>
+    <img id="pic" src="" alt="Pic goes here.">
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCppFfJSFp_J9sY2MAlfDFXETZBBJYbl60",
+            authDomain: "web2-1.firebaseapp.com",
+            databaseURL: "https://web2-1.firebaseio.com",
+            projectId: "web2-1",
+            storageBucket: "web2-1.appspot.com",
+            messagingSenderId: "391760527181"
+        };
+        firebase.initializeApp(config);
+        
+        var uploader = document.getElementById("uploader");
+        var fileButton = document.getElementById("fileButton");
+        var showButton = document.getElementById("showPic");
+        
+        showButton.addEventListener("click", function(){
+            var storageRef = firebase.storage().ref('username/usa.png');
+            var URL = "1-";
+            storageRef.getDownloadURL().then(function(url){
+                                document.getElementById("pic").src=url;
+                var test = url;
+               
+
+            });
+            
+            alert(test);
+                
+        });
+        
+        
+        
+    fileButton.addEventListener("change", function(e){
+          var file = e.target.files[0];
+        
+        var storageRef = firebase.storage().ref('username/' + file.name);
+        
+        var task = storageRef.put(file);
+        
+        task.on("state_changed", 
+               function progress(snapshot){
+            var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            uploader.value = percentage;
+        }
+               );
+    });
+        
+        
+
+    </script>
+
+</body>
+
+</html>
