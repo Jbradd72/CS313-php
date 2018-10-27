@@ -13,15 +13,10 @@ echo "accountid: $accountId";
 echo "filename: $filename";
 echo "tablename: $table";
 echo "username = $username";
+echo "size = $size"
 
-$register = $db->prepare("INSERT INTO $table (accountid, filename, size) VALUES ($accountid, '$filename', $size)");
-
-$register->bindparam(':username', $username, PDO::PARAM_STR);
-$register->bindparam(':password', $password, PDO::PARAM_STR);
-$register->bindparam(':name', $name, PDO::PARAM_STR);
-$register->bindparam(':email', $email, PDO::PARAM_STR);
+$register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($accountid, '$filename', $size)");
   
-$register->execute();
 ?>
 <html>
 
