@@ -5,9 +5,11 @@ $table = $_POST['type'];
 $filename = $_FILES['fileToUpload']['name'];
 $username = $_SESSION['username'];
 
-$account = $db->query("SELECT accountid from accounts where )
+$account = $db->query("SELECT accountid from accounts where username = '$username'");
+$accountFetch =$account->fetch(PDO::FETCH_ASSOC);
+$accountId = $accountFetch['accountid'];
 
-$register = $db->prepare("INSERT INTO accounts (username, password, name, joindate, email) VALUES (:username, :password, :name, CURRENT_DATE, :email)");
+$register = $db->prepare("INSERT INTO $table (accountid, filename) VALUES ($accountid, $filename)");
 
 $register->bindparam(':username', $username, PDO::PARAM_STR);
 $register->bindparam(':password', $password, PDO::PARAM_STR);
