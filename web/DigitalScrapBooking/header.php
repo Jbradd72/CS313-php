@@ -30,9 +30,9 @@
                 </li>
                 <li>
                    <?php if (isset($_SESSION['username'])) 
-                    echo "<a class='nav-link' href='mypage.php'>My Page <span class='sr-only'></span></a>"
+                    echo "<a class='nav-link' href='mypage.php'>My Page <span class='sr-only'></span></a>";
                     else
-                    echo "<a class='nav-link' href='login.php'>Login <span class='sr-only'></span></a>" ?>
+                    echo "<a class='nav-link' href='login.php'>Login <span class='sr-only'></span></a>"; ?>
                 </li>
 
             </ul>
