@@ -3,6 +3,7 @@
 
 $table = $_POST['type'];
 $filename = $_FILES['fileToUpload']['name'];
+$size = $_FILES['fileToUpload']['size'];
 $username = $_SESSION['username'];
 
 $account = $db->query("SELECT accountid from accounts where username = '$username'");
@@ -13,7 +14,7 @@ echo "filename: $filename";
 echo "tablename: $table";
 echo "username = $username";
 
-$register = $db->prepare("INSERT INTO $table (accountid, filename) VALUES ($accountid, $filename)");
+$register = $db->prepare("INSERT INTO $table (accountid, filename, size) VALUES ($accountid, '$filename', $size)");
 
 $register->bindparam(':username', $username, PDO::PARAM_STR);
 $register->bindparam(':password', $password, PDO::PARAM_STR);
@@ -60,7 +61,7 @@ $register->execute();
         </div>
     </nav>
     
-    <form method="post" action="" >
+    <form method="post" action="" enctype="multipart/form-data">
     <progress style="margin-top: 15%;" value="0" max="100" id="uploader">0%</progress><br>
     <input style="margin-top: 5%;" type="file" value="upload" name="fileToUpload" id="fileButton" />
     <br>
@@ -93,7 +94,7 @@ $register->execute();
         
         
         
-    fileButton.addEventListener("change", function(e){
+   /* fileButton.addEventListener("change", function(e){
           var file = e.target.files[0];
         
         var storageRef = firebase.storage().ref('username/'+ type +'/' + file.name);
@@ -106,7 +107,7 @@ $register->execute();
             uploader.value = percentage;
         }
                );
-    });
+    });*/
         
         
 
