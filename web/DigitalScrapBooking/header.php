@@ -25,9 +25,7 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="mypage.php">My Page <span class="sr-only">(current)</span></a>
-                </li>
+            
                 <li>
                    <?php if (isset($_SESSION['username'])) 
                     echo "<a class='nav-link' href='mypage.php'>My Page <span class='sr-only'></span></a>";
