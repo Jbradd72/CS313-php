@@ -9,34 +9,47 @@
     <script src="bootstrap-4.1.1/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
 
     <script>
-        $("pbutton").click(function() {
-            alert("yep");
-            $("content").empty();
+        $(document).ready(function() {
+            
             $.ajax({
-                url: "loadFiles.php?load=photo",
-                success: function(result) {
-                    $("#content").html(result);
-                }
+                      url: "loadFiles.php?load=photo",
+                      success: function(result) {
+                          alert(result);
+                          $("#content").html(result);
+                      }
+                  });
+            
+            
+            $("#pbutton").click(function() {
+                alert("pbutton")
+                $("content").empty();
+                  $.ajax({
+                      url: "loadFiles.php?load=photo",
+                      success: function(result) {
+                          alert(result);
+                          $("#content").html(result);
+                      }
+                  });
             });
-        });
 
-        $("vbutton").click(function() {
-            $("content").empty();
-            $.ajax({
-                url: "loadFiles.php?load=video",
-                success: function(result) {
-                    $("#content").html(result);
-                }
+            $("vbutton").click(function() {
+                $("content").empty();
+                $.ajax({
+                    url: "loadFiles.php?load=video",
+                    success: function(result) {
+                        $("#content").html(result);
+                    }
+                });
             });
-        });
 
-        $("dbutton").click(function() {
-            $("content").empty();
-            $.ajax({
-                url: "loadFiles.php?load=document",
-                success: function(result) {
-                    $("#content").html(result);
-                }
+            $("dbutton").click(function() {
+                $("content").empty();
+                $.ajax({
+                    url: "loadFiles.php?load=document",
+                    success: function(result) {
+                        $("#content").html(result);
+                    }
+                });
             });
         });
 
@@ -88,7 +101,7 @@
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
         </header>
         <ul class="nav nav-tabs nav-justified">
-            <li class="active nav-item" data-toggle="tab"><a id="pbutton" class="nav-link">Photos</a></li>
+            <li id="pbutton" onClick="test()" class="active nav-item" data-toggle="tab"><a class="nav-link">Photos</a></li>
             <li class="nav-item" data-toggle="tab"><a id="vbutton" class="nav-link">Videos</a></li>
             <li class="nav-item" data-toggle="tab"><a id="dbutton" class="nav-link">Documents</a></li>
         </ul>
