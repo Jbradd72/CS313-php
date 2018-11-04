@@ -11,13 +11,13 @@
     <script>
         $(document).ready(function() {
             
-            $.ajax({
+           /* $.ajax({
                       url: "loadFiles.php?load=photo",
                       success: function(result) {
                           alert(result);
                           $("#content").html(result);
                       }
-                  });
+                  });*/
             
             
             $("#pbutton").click(function() {
@@ -32,7 +32,8 @@
                   });
             });
 
-            $("vbutton").click(function() {
+            $("#vbutton").click(function() {
+                alert('vbutton');
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=video",
@@ -42,7 +43,8 @@
                 });
             });
 
-            $("dbutton").click(function() {
+            $("#dbutton").click(function() {
+                alert("document");
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=document",
@@ -101,9 +103,9 @@
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
         </header>
         <ul class="nav nav-tabs nav-justified">
-            <li id="pbutton" onClick="test()" class="active nav-item" data-toggle="tab"><a class="nav-link">Photos</a></li>
-            <li class="nav-item" data-toggle="tab"><a id="vbutton" class="nav-link">Videos</a></li>
-            <li class="nav-item" data-toggle="tab"><a id="dbutton" class="nav-link">Documents</a></li>
+            <li id="pbutton" class="active nav-item" data-toggle="tab"><a class="nav-link">Photos</a></li>
+            <li id="vbutton" class="nav-item" data-toggle="tab"><a class="nav-link">Videos</a></li>
+            <li id="dbutton" class="nav-item" data-toggle="tab"><a class="nav-link">Documents</a></li>
         </ul>
         <div id="content"></div>
 

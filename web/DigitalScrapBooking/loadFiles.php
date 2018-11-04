@@ -4,7 +4,7 @@ require("dbconfig.php");
 
         
 $type = $_GET['load'];
-        
+echo 'something';
         
 if ($type == 'video'){
 $video = $db->query("SELECT accounts.username, video.filename AS filename FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
