@@ -11,29 +11,28 @@
     <script>
         $(document).ready(function() {
             
-           /* $.ajax({
+            $.ajax({
                       url: "loadFiles.php?load=photo",
                       success: function(result) {
-                          alert(result);
+                          
                           $("#content").html(result);
                       }
-                  });*/
+                  });
             
             
             $("#pbutton").click(function() {
-                alert("pbutton")
                 $("content").empty();
                   $.ajax({
                       url: "loadFiles.php?load=photo",
                       success: function(result) {
-                          alert(result);
+                          
                           $("#content").html(result);
                       }
                   });
             });
 
             $("#vbutton").click(function() {
-                alert('vbutton');
+               
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=video",
@@ -44,7 +43,7 @@
             });
 
             $("#dbutton").click(function() {
-                alert("document");
+               
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=document",
