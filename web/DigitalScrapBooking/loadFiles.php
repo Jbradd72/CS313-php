@@ -4,7 +4,7 @@ require("dbconfig.php");
 
         
 $type = $_GET['load'];
-echo $type;
+
         
 if ($type == 'video'){
 $video = $db->query("SELECT accounts.username, video.filename AS filename FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
@@ -27,7 +27,6 @@ $video = $db->query("SELECT accounts.username, video.filename AS filename FROM v
 }
 
 if ($type == "photo"){
-    echo "in mate";
 $photo = $db->query("SELECT accounts.username, photo.filename AS filename FROM photo JOIN accounts ON accounts.accountid = photo.accountid AND accounts.username = '".$_SESSION['username']."'");
         
         

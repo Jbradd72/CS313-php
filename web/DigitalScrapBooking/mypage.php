@@ -1,11 +1,3 @@
-
-<?php 
-    require('dbconfig.php');
-    if (!isset($_SESSION['username'])){
-        header('location: login.php');
-    }  
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -13,11 +5,67 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.1.1/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            
+           /* $.ajax({
+                      url: "loadFiles.php?load=photo",
+                      success: function(result) {
+                          alert(result);
+                          $("#content").html(result);
+                      }
+                  });*/
+            
+            
+            $("#pbutton").click(function() {
+                alert("pbutton")
+                $("content").empty();
+                  $.ajax({
+                      url: "loadFiles.php?load=photo",
+                      success: function(result) {
+                          alert(result);
+                          $("#content").html(result);
+                      }
+                  });
+            });
+
+            $("#vbutton").click(function() {
+                alert('vbutton');
+                $("content").empty();
+                $.ajax({
+                    url: "loadFiles.php?load=video",
+                    success: function(result) {
+                        $("#content").html(result);
+                    }
+                });
+            });
+
+            $("#dbutton").click(function() {
+                alert("document");
+                $("content").empty();
+                $.ajax({
+                    url: "loadFiles.php?load=document",
+                    success: function(result) {
+                        $("#content").html(result);
+                    }
+                });
+            });
+        });
+
+    </script>
 
     <title>Bootstrap test</title>
     <style>
-        onfocus {}
+        .nav-link:hover {
+            background-color: lightgray;
+        }
+
     </style>
+
+
 
 </head>
 
@@ -33,12 +81,7 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li>
-                   <?php if (isset($_SESSION['username'])) 
-                    echo "<a class='nav-link' href='mypage.php'>My Page <span class='sr-only'></span></a>";
-                    else
-                    echo "<a class='nav-link' href='login.php'>Login <span class='sr-only'></span></a>"; ?>
-                </li>
+
                 <li>
                     <a class="nav-link" href="fileUpload.php">Save files <span class="sr-only">(current)</span></a>
                 </li>
@@ -54,78 +97,19 @@
     <!-- Page Content -->
     <div class="container">
 
-      <!-- Jumbotron Header -->
-      <header class="jumbotron my-4">
-        <h1 class="display-3">A Warm Welcome!</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-      </header>
-        
-        <?php 
-        echo $_SESSION['username'];
-        $video = $db->query("SELECT accounts.username, video.filename AS filename FROM video JOIN accounts ON accounts.accountid = video.accountid AND accounts.username = '".$_SESSION['username']."'");
-        
-        $photo = $db->query("SELECT accounts.username, photo.filename AS filename FROM photo JOIN accounts ON accounts.accountid = photo.accountid AND accounts.username = '".$_SESSION['username']."'");
-        
-        $doc = $db->query("SELECT accounts.username, document.filename AS filename FROM document JOIN accounts ON accounts.accountid = document.accountid AND accounts.username = '".$_SESSION['username']."'");
-        
-        while($row = $video->fetch(PDO::FETCH_ASSOC)){
-            echo " <div class='row text-center'>
-
-        <div class='col-lg'>
-          <div class='card'>
-              <video controls class='card-img-top' src='".$row["username"]."/".$row["filename"]."' alt=''></video>
-            <div class='card-body'>
-              <h4 class='card-title'>".$row["filename"]."</h4>
-              <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class='card-footer'>
-            </div>
-          </div>
-        </div>
-        </div>";
-        }
-        
-        while($row = $photo->fetch(PDO::FETCH_ASSOC)){
-            echo " <div class='row text-center'>
-
-        <div class='col-lg'>
-          <div class='card'>
-              <img  class='card-img-top' src='".$row["username"]."/".$row["filename"]."' alt=''></img>
-            <div class='card-body'>
-              <h4 class='card-title'>".$row["filename"]."</h4>
-              <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class='card-footer'>
-            </div>
-          </div>
-        </div>
-        </div>";
-        }
-        
-         while($row = $doc->fetch(PDO::FETCH_ASSOC)){
-            echo " <div class='row text-center'>
-
-        <div class='col-lg'>
-          <div class='card'>
-              <img  class='card-img-top' src='
-        https://image.freepik.com/free-icon/text-document_318-48568.jpg' alt=''></img>
-            <div class='card-body'>
-              <a href='".$row["username"]."/".$row["filename"]."'><h4 class='card-title'>".$row["filename"]."</h4></a>
-              <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class='card-footer'>
-            </div>
-          </div>
-        </div>
-        </div>";
-        }
-        
-          
-          ?>
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">A Warm Welcome!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+        </header>
+        <ul class="nav nav-tabs nav-justified">
+            <li id="pbutton" class="active nav-item" data-toggle="tab"><a class="nav-link">Photos</a></li>
+            <li id="vbutton" class="nav-item" data-toggle="tab"><a class="nav-link">Videos</a></li>
+            <li id="dbutton" class="nav-item" data-toggle="tab"><a class="nav-link">Documents</a></li>
+        </ul>
+        <div id="content"></div>
 
     </div>
     <!-- /.container -->
 
-<?php require('footer.php');?>
-
-   
+    <?php require('footer.php');?>
