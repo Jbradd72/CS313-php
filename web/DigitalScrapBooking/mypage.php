@@ -21,8 +21,6 @@ if (!isset($_SESSION['username'])){
     </style>
 
 
-
-</head>
 <script src="jquery-3.3.1.js"></script>
 
     <script>
@@ -65,6 +63,8 @@ if (!isset($_SESSION['username'])){
         });
 
     </script>
+
+</head>
 
     
 <body style="padding-top: 65px">
