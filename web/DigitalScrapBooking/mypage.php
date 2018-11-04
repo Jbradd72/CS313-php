@@ -30,7 +30,7 @@ if (!isset($_SESSION['username'])){
         $(document).ready(function() {
                 alert(jQuery);
             
-            $("#pbutton").click(function() {
+            jQuery.("#pbutton").click(function() {
                 
                 $("content").empty();
                   $.ajax({
