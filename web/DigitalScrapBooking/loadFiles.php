@@ -26,7 +26,7 @@ $video = $db->query("SELECT accounts.username, video.filename AS filename FROM v
         }
 }
 
-if ($type == 'photo'){
+if ($type == "photo"){
 $photo = $db->query("SELECT accounts.username, photo.filename AS filename FROM photo JOIN accounts ON accounts.accountid = photo.accountid AND accounts.username = '".$_SESSION['username']."'");
         
         
