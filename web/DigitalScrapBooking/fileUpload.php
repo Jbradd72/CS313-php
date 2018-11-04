@@ -18,7 +18,7 @@ $register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($
 
 <head>
     <meta charset="utf-9">
-    <title File Upload></title>
+    <title> File Upload</title>
     
     <link rel="stylesheet" href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap.css">
 </head>
@@ -54,7 +54,7 @@ $register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($
     </nav>
     
     <form method="post" action="" enctype="multipart/form-data">
-    <input style="margin:auto; margin-top:20%" type="file" value="upload" name="fileToUpload" id="fileButton" />
+    <input style="margin: 20% auto auto auto;" type="file" value="upload" name="fileToUpload" id="fileButton" />
     
      <p>Choose where to upload your file:</p><select style="display:inline" id="filetype" name="type" >
   <option value="video">Videos</option>
