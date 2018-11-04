@@ -1,4 +1,10 @@
-<!doctype html>
+<?php
+session_start();
+if (!isset($_SESSION['username'])){
+    header("location: login.php");
+    die();
+}
+?><!doctype html>
 <html lang="en">
 
 <head>
