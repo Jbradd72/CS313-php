@@ -54,7 +54,7 @@ $register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($
     </nav>
     
     <form method="post" action="" enctype="multipart/form-data">
-    <input style="margin-top: 5%;" type="file" value="upload" name="fileToUpload" id="fileButton" />
+    <input style="margin:auto;" type="file" value="upload" name="fileToUpload" id="fileButton" />
     
      <p>Choose where to upload your file:</p><select style="display:inline" id="filetype" name="type" >
   <option value="video">Videos</option>
