@@ -54,15 +54,14 @@ $register = $db->query("INSERT INTO $table (accountid, filename, size) VALUES ($
     </nav>
     
     <form method="post" action="" enctype="multipart/form-data">
-    <progress style="margin-top: 15%;" value="0" max="100" id="uploader">0%</progress><br>
     <input style="margin-top: 5%;" type="file" value="upload" name="fileToUpload" id="fileButton" />
-    <br>
-     <p><br>Select a file type:</p><select id="filetype" name="type"  >
-  <option value="video">Video</option>
-  <option value="photo">Photo</option>
-  <option value="document">Document</option>
+    
+     <p>Choose where to upload your file:</p><select style="display:inline" id="filetype" name="type" >
+  <option value="video">Videos</option>
+  <option value="photo">Photos</option>
+  <option value="document">Documents</option>
 </select>
-        <input type='submit'>
+        <br><input type='submit' value='upload'>
         </form>
     
 
