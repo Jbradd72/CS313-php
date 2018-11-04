@@ -17,13 +17,6 @@ if (!isset($_SESSION['username'])){
     <script>
         $(document).ready(function() {
             
-            $.ajax({
-                      url: "loadFiles.php?load=photo",
-                      success: function(result) {
-                          alert(result);
-                          $("#content").html(result);
-                      }
-                  });
             
             
             $("#pbutton").click(function() {
