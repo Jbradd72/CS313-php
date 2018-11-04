@@ -11,7 +11,20 @@ if (!isset($_SESSION['username'])){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="bootstrap-4.1.1/bootstrap-4.1.1/dist/css/bootstrap.css">
-    <script src="jquery-3.3.1.js"></script>
+   
+    <title>My Page</title>
+    <style>
+        .nav-link:hover {
+            background-color: lightgray;
+        }
+
+    </style>
+
+
+
+</head>
+
+     <script src="jquery-3.3.1.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -54,18 +67,7 @@ if (!isset($_SESSION['username'])){
 
     </script>
 
-    <title>Bootstrap test</title>
-    <style>
-        .nav-link:hover {
-            background-color: lightgray;
-        }
-
-    </style>
-
-
-
-</head>
-
+    
 <body style="padding-top: 65px">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
