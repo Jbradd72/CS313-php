@@ -11,13 +11,13 @@
     <script>
         $(document).ready(function() {
             
-           /* $.ajax({
+            $.ajax({
                       url: "loadFiles.php?load=photo",
                       success: function(result) {
                           alert(result);
                           $("#content").html(result);
                       }
-                  });*/
+                  });
             
             
             $("#pbutton").click(function() {
