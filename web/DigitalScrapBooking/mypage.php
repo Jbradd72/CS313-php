@@ -3,11 +3,13 @@ session_start();
 if (!isset($_SESSION['username'])){
     header("location: login.php");
     die();
+
+}
+
 else
 {
     header("location: mypage.html");
     die();
-}
 }
 ?><!doctype html>
 <html lang="en">
