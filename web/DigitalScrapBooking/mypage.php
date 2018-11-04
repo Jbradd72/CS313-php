@@ -43,7 +43,7 @@ if (!isset($_SESSION['username'])){
             });
 
             $("#vbutton").click(function() {
-                
+    
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=video",
