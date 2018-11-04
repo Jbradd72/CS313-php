@@ -28,10 +28,10 @@ if (!isset($_SESSION['username'])){
 
     <script>
         $(document).ready(function() {
-                
+                alert(jQuery);
             
             $("#pbutton").click(function() {
-                alert("pbutton")
+                
                 $("content").empty();
                   $.ajax({
                       url: "loadFiles.php?load=photo",
@@ -43,7 +43,7 @@ if (!isset($_SESSION['username'])){
             });
 
             $("#vbutton").click(function() {
-                alert('vbutton');
+                
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=video",
@@ -54,7 +54,7 @@ if (!isset($_SESSION['username'])){
             });
 
             $("#dbutton").click(function() {
-                alert("document");
+    
                 $("content").empty();
                 $.ajax({
                     url: "loadFiles.php?load=document",
